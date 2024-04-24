@@ -9,7 +9,7 @@ git clone https://github.com/faustozamparelli/UnixTrash
 sudo mv UnixTrash/trashyscript.sh /usr/local/bin
 rm -rf UnixTrash
 ```
-Now if you want to remap the command to rm go to seaction 2.0 if not (preferred) keep reading.
+Now if you want to remap the command to rm go to seaction ```2.0``` if not (preferred) keep reading.  
 Depending on your shell run one of this commands:
 For bash shell:
 ```shell
@@ -36,7 +36,7 @@ You can keep using the rm command for files you want to delete immediatly
 
 #### Enjoy no more pain in permanently deleting files accidentaly!
 
-## 2.0 If you are too used to the rm command and want to use that one:
+### 2.0 If you are too used to the rm command and want to use that one:
 For bash shell:
 ```shell
 echo "alias rm='/usr/local/bin/trashyscript.sh'" >> ~/.bashrc
