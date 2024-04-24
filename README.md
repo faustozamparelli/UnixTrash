@@ -33,7 +33,7 @@ You are all set!!
 
 ## Usage:
 You can now use the script in your terminal by using the ```rm``` command as you are accustomed to, but the files or directories will be moved to the trash instead.
-NOTE: The only adjustment you'll need to make is to avoid using rm -rf for directories, and just use rm since the script automatically performs recursive actions by recognizing whether the target is a directory or a file.
+NOTE: The only adjustment you'll need to make is to avoid using ```rm -rf``` for directories, and just use rm since the script automatically performs recursive actions by recognizing whether the target is a directory or a file.
 
 The actual command to permanently delete files or directories is now the ```del``` command in your terminal.
 
