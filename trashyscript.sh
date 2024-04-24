@@ -1,7 +1,7 @@
-#!/opt/homebrew/bin/bash
+#!/usr/bin/env bash
 
 # Get the absolute path of the file or directory
-item=$(realpath "$1")
+item=$(cd "$(dirname "$1")"; pwd -P)/$(basename "$1")
 
 # Check if the item exists
 if [ ! -e "$item" ]; then
@@ -14,7 +14,13 @@ datetime=$(date +%Y%m%d%H%M%S)
 
 # Create a unique name for the item in the Trash
 basename=$(basename "$item")
-trashitem="$HOME/.Trash/$basename.$datetime"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # MacOS
+  trashitem="$HOME/.Trash/$basename.$datetime"
+else
+  # Assume Linux
+  trashitem="$HOME/.local/share/Trash/files/$basename.$datetime"
+fi
 
 # Move the item to the Trash
 mv "$item" "$trashitem"
