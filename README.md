@@ -31,7 +31,7 @@ source ~/.config/fish/config.fish
 ```
 your are all set!
 
-##Usage:
+## Usage:
 You can now use the script in in your terminal by just doing the command rm like you where used to but you will then see the file or directory inside the trash.
 NOTE: the only thing you will need to 'get used to' is to do not do rm -rf for direcotyes but just rm because it does the recursive action by itelf recognizing if the object passed is a directory or a file
 
