@@ -29,8 +29,9 @@ source ~/.config/fish/config.fish
 You are all set!!  
 
 ## Usage:  
-You can now use the script in your terminal by using the ```r``` command (better than using the defaul rm because some tool you install may need the original one) to move the files into your system trash
+You can now use the script in your terminal by using the ```r``` command (better than using the defaul rm because some tool you install may need the original one) to move the files into your system trash  
 NOTE: One adjustment you'll need to get used to is to avoid using ```r -rf``` for directories, and just use r command since the script automatically performs recursive actions by recognizing whether the target is a directory or a file.  
+And you can use r --empty to empty your trash, right from the cli!  
 
 You can keep using the rm command for files you want to delete immediatly  
 
@@ -55,7 +56,7 @@ echo "alias rm '/usr/local/trashyscript.sh'" >> ~/.config/fish/config.fish
 echo "alias del 'rm'" >> ~/.config/fish/config.fish
 source ~/.config/fish/config.fish
 ```
-Use ```rm``` to move to the trash (no need for flags like -rf) and ```del``` as your old rm command.
+Use ```rm``` to move to the trash (no need for flags like -rf) and ```del``` as your old rm command. And rm --empty to empty your trash.
 
 
 

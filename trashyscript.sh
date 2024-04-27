@@ -1,5 +1,21 @@
 #!/usr/bin/env bash
 
+# Check if the only argument is --empty
+if [ "$#" -eq 1 ] && [ "$1" == "--empty" ]; then
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        # MacOS
+        rm -rf "$HOME/.Trash/"*
+    else
+        # Assume Linux
+        rm -rf "$HOME/.local/share/Trash/files/"*
+    fi
+    echo "The Trash has been emptied."
+    exit 0
+elif [ "$1" == "--empty" ]; then
+    echo "Error: --empty should be the only argument."
+    exit 1
+fi
+
 # Get the absolute path of the file or directory
 item=$(cd "$(dirname "$1")"; pwd -P)/$(basename "$1")
 
